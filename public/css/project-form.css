@@ -34,7 +34,15 @@ h1 {
 
 /* Űrlap stílusok */
 form {
-    background-color: #ffffff;
+    background: 
+        repeating-linear-gradient(
+            45deg, 
+            rgba(255, 255, 255, 0.9), 
+            rgba(255, 255, 255, 0.9) 10px, 
+            rgba(240, 240, 240, 0.9) 10px, 
+            rgba(240, 240, 240, 0.9) 20px
+        ),
+        linear-gradient(to right, #f7f7f7, #eaeaea);
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -125,17 +133,23 @@ button {
     background-color: #5a6268;
 }
 
-/* Kapcsolattartó csoport */
 .contact-form-group {
-    position: relative; /* Allows positioning of the remove button */
+    position: relative; 
     padding: 1rem;
     border: 1px solid #e1e8ed;
     border-radius: 0.5rem;
-    background-color: #ffffff;
-    margin-bottom: 1rem; /* Space between contact groups */
+    background: 
+        repeating-linear-gradient(
+            45deg, 
+            rgba(255, 255, 255, 0.9), 
+            rgba(255, 255, 255, 0.9) 10px, 
+            rgba(240, 240, 240, 0.9) 10px, 
+            rgba(240, 240, 240, 0.9) 20px
+        ),
+        linear-gradient(to right, #f7f7f7, #eaeaea);
+    margin-bottom: 1rem; 
 }
 
-/* Remove button stílus */
 .btn-remove {
     position: absolute;
     top: 0.5rem;
@@ -150,5 +164,18 @@ button {
 
 .btn-remove:hover {
     color: #c82333;
+}
+
+.alert {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    background-color: #c82333;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    
 }
 

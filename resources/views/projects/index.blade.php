@@ -64,14 +64,12 @@
 
             <div class="pagination-container mt-3">
                 <ul class="pagination">
-                    <!-- Previous Page -->
                     <li class="page-item {{ $projects->onFirstPage() ? 'disabled' : '' }}">
                         <a class="page-link" href="{{ $projects->previousPageUrl() }}" aria-label="Previous">
                             &laquo;
                         </a>
                     </li>
             
-                    <!-- Page Numbers -->
                     @for ($i = 1; $i <= $projects->lastPage(); $i++)
                         <li class="page-item {{ $i == $projects->currentPage() ? 'active' : '' }}">
                             <a class="page-link" href="{{ $projects->url($i) }}">
@@ -80,7 +78,6 @@
                         </li>
                     @endfor
             
-                    <!-- Next Page -->
                     <li class="page-item {{ $projects->hasMorePages() ? '' : 'disabled' }}">
                         <a class="page-link" href="{{ $projects->nextPageUrl() }}" aria-label="Next">
                             &raquo;

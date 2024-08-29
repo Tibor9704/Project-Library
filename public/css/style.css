@@ -16,17 +16,16 @@ body {
     color: #14171a;
     background-image: url('../desk.jpg');
 }
-/* Main container styling */
+
 .container {
     flex: 1;
     margin: 0 auto;
     padding: 1rem;
-    max-width: 1200px; /* Maximum width for larger screens */
-    width: 90%; /* Relative width for medium screens */
+    max-width: 1200px; 
+    width: 90%; 
     box-sizing: border-box;
 }
 
-/* Heading style */
 h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -35,7 +34,6 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Button styles */
 .btn-primary {
     background-color: #1da1f2;
     border: none;
@@ -47,11 +45,18 @@ h1 {
     background-color: #1991db;
 }
 
-/* Alert styles */
 .alert-success {
     color: #ffffff;
     border-radius: 0.25rem;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #14bd39;
+    border-color: #064404;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
 }
 
 .alert-info {
@@ -59,14 +64,12 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* List group styling */
 .list-group {
     padding: 0;
     margin-bottom: 1rem;
-    list-style: none; /* Remove default list styling */
+    list-style: none;
 }
 
-/* List item styling */
 .list-group-item {
     border: 1px solid #043355;
     border-radius: 0.25rem;
@@ -75,17 +78,15 @@ h1 {
     padding: 1rem;
     display: flex;
     align-items: center;
-    box-sizing: border-box; /* Include padding and border in width */
+    box-sizing: border-box; 
 }
 
-/* Flexbox settings for project details */
 .project-details-wrapper {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
 }
 
-/* Adjust project details flex behavior */
 .project-details {
     display: flex;
     flex-direction: column;
@@ -93,23 +94,19 @@ h1 {
     flex-grow: 1;
 }
 
-/* Badge styling */
 .badge {
     font-size: 0.875rem;
     color: #ffffff;
-
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     text-align: center;
 }
 
-/* Project actions styling */
 .project-actions {
     display: flex;
     gap: 0.5rem;
 }
 
-/* Button styles for project actions */
 .project-actions .btn {
     border: 1px solid transparent;
     border-radius: 0.25rem;
@@ -148,57 +145,48 @@ h1 {
     border-color: #bd2130;
 }
 
-/* Pagination container */
 .pagination-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
 }
 
-/* Pagination list */
 .pagination {
     display: flex;
     padding: 0;
     margin: 0;
-    list-style: none; /* Eltávolítja a lista stílust */
+    list-style: none; 
 }
 
-/* Pagination items */
 .page-item {
-    margin: 0 0.25rem; /* Kisebb margó az elemek között */
+    margin: 0 0.25rem; 
 }
 
-/* Pagination links */
 .page-link {
-    border-radius: 0.5rem; /* Kerekített sarkok */
-    background-color: #ffffff; /* Fehér háttér */
-    color: rgb(168, 161, 161); /* Kék szöveg szín */
-    border: 1px solid #dee2e6; /* Szürke keret */
-    padding: 0.5rem 0.75rem; /* Kényelmesebb padding */
-    font-size: 0.875rem; /* Kisebb betűméret */
-    text-decoration: none; /* Eltávolítja az aláhúzást */
-    display: inline-flex; /* Flexbox a középre igazításhoz */
-    align-items: center; /* Középre igazítja a tartalmat */
-    justify-content: center; /* Középre igazítja a tartalmat */
+    border-radius: 0.5rem; 
+    background-color: #ffffff; 
+    color: rgb(168, 161, 161); 
+    border: 1px solid #dee2e6; 
+    padding: 0.5rem 0.75rem; 
+    font-size: 0.875rem; 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* Active page link */
 .page-item.active .page-link {
-    background-color: rgb(168, 161, 161); /* Kék háttér az aktív oldalnál */
-    color: #ffffff; /* Fehér szöveg az aktív oldalon */
-    border-color: rgb(168, 161, 161); /* Kék keret az aktív oldalon */
+    background-color: rgb(168, 161, 161); 
+    color: #ffffff; 
+    border-color: rgb(168, 161, 161); 
 }
 
-/* Page link hover effect */
 .page-link:hover {
-    background-color: #e9ecef; /* Világos szürke háttér hover állapotban */
-    color: #0056b3; /* Sötétebb kék szöveg hover állapotban */
+    background-color: #e9ecef; 
+    color: #0056b3; 
 }
 
-
-
-/* Navbar styles */
 .navbar {
     background-color: rgb(168, 161, 161);
     padding: 0.5rem 1rem;
@@ -236,18 +224,20 @@ h1 {
     background-color: grey;
 }
 
-/* Filter form styles */
+
 #status-filter-form {
     display: flex;
     justify-content: flex-end; 
 }
 
-/* Form group styles */
+#status-filter-form select {
+    font-family: 'Courier New', Courier, monospace; 
+}
+
 .form-group {
     margin: 0; 
 }
 
-/* Form control styles */
 .form-control {
     border-radius: 0.25rem; 
     padding: 0.375rem 0.75rem; 
@@ -268,7 +258,6 @@ h1 {
     color: #14171a; 
 }
 
-/* Footer styles */
 .footer {
     background-color: rgb(168, 161, 161);
     color: #ffffff;
@@ -277,51 +266,47 @@ h1 {
     width: 100%;
     margin-top: auto;
     position: relative;
-    bottom: 0; /* Stick footer to the bottom */
+    bottom: 0; 
 }
 
-/* Flex container for the project list item */
 .project-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid #e1e8ed;
-    background-color: #ffffff;
+    background: 
+    repeating-linear-gradient(45deg, rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.6) 10px, rgba(224, 224, 224, 0.6) 10px, rgba(224, 224, 224, 0.6) 20px), 
+        linear-gradient(to right, #f7f7f7, #eaeaea);
 }
 
-/* Container for the project details */
 .project-details {
     display: flex;
     align-items: center;
     flex-grow: 1;
 }
 
-/* Container for status icon and action buttons */
 .project-actions {
     display: flex;
     align-items: center;
 }
 
-/* Margin for the status badge */
 .status-badge {
     margin-right: 10px;
 }
 
-/* Icon and contact count styling */
 .contact-info {
     display: flex;
     align-items: center;
     margin-right: 10px;
 }
 
-/* Ensure buttons are aligned properly */
 .project-buttons {
     display: flex;
     align-items: center;
 }
 
-/* Button styling for actions */
 .project-buttons .btn {
     margin-left: 5px;
 }
+

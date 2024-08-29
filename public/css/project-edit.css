@@ -1,4 +1,3 @@
-/* Alap stílusok az oldal teljes magasságához és a body stílusához */
 html, body {
     height: 100%;
     margin: 0;
@@ -10,7 +9,6 @@ body {
     color: #14171a;
 }
 
-/* Container stílus */
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -18,7 +16,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Heading stílus */
 h1 {
     text-align: center;
     font-size: 2rem;
@@ -27,17 +24,14 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-/* Űrlap stílusok */
 form {
-    background-color: #ffffff;
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 800px;  
 }
 
-/* Űrlap csoport */
 .form-group {
     margin-bottom: 1rem;
     display: flex;
@@ -45,24 +39,22 @@ form {
     align-items: center;
 }
 
-/* Label stílus */
 .form-group label {
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #14171a;
 }
 
-/* Input és textarea stílusok */
 .form-control {
-    width: 100%; /* Teljes szélesség */
-    max-width: 50%; /* Maximális szélesség beállítása */
-    padding: 0.75rem; /* Kényelmesebb padding */
+    width: 100%; 
+    max-width: 50%; 
+    padding: 0.75rem; 
     font-size: 1rem;
-    border-radius: 0.5rem; /* Kerekebb sarkak */
+    border-radius: 0.5rem; 
     border: 1px solid #e1e8ed;
     background-color: #ffffff;
     color: #14171a;
-    margin-bottom: 1rem; /* Hely a mezők között */
+    margin-bottom: 1rem; 
 
 }
 
@@ -74,18 +66,16 @@ form {
 #status {
     text-align: center ;
 }
-/* Textarea stílus */
+
 textarea.form-control {
-    height: 150px; /* Magasság beállítása */
-    resize: vertical; /* Csak függőlegesen történő átméretezés engedélyezése */
+    height: 150px; 
+    resize: vertical; 
 }
 
-/* Select stílus */
 select.form-control {
     padding: 0.75rem;
 }
 
-/* Button stílusok */
 button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -100,9 +90,7 @@ button:hover {
     background-color: #5a6268;
 }
 
-/* Button primary */
 .btn-primary {
-    background-color: #1da1f2;
     color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -111,7 +99,6 @@ button:hover {
     background-color: #1991db;
 }
 
-/* Button secondary */
 .btn-secondary {
     background-color: #6c757d;
     color: #ffffff;
@@ -121,17 +108,15 @@ button:hover {
     background-color: #5a6268;
 }
 
-/* Kapcsolattartó csoport */
 .contact-form-group {
-    position: relative; /* Allows positioning of the remove button */
+    position: relative; 
     padding: 1rem;
     border: 1px solid #4a5157;
     border-radius: 0.5rem;
     background-color: #ffffff;
-    margin-bottom: 1rem; /* Space between contact groups */
+    margin-bottom: 1rem; 
 }
 
-/* Remove button stílus */
 .btn-remove {
     position: absolute;
     top: 0.5rem;
@@ -147,3 +132,5 @@ button:hover {
 .btn-remove:hover {
     color: #c82333;
 }
+
+

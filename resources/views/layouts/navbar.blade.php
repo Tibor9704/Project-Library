@@ -4,7 +4,7 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             @if (Route::currentRouteName() !== 'projects.create')
-                <a class="nav-link" href="{{ route('projects.create') }}">Új projekt létrehozása</a>
+                <a class="nav-link" href="{{ route('projects.create') }}"><h3>Új projekt létrehozása</h3></a>
             @endif
                 </form>
             </li>
