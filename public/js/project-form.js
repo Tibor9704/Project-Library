@@ -24,14 +24,21 @@ function removeContact(button) {
     if (container.children.length > 1) {
         button.parentElement.remove();
     } else {
-        alert("Legalább egy kapcsolattartónak lennie kell.");
+        showAlertModal('Legalább egy kapcsolattartónak lennie kell!');
     }
+}
+
+function showAlertModal(message) {
+    const modalBody = document.getElementById('modal-body');
+    modalBody.textContent = message;
+    const myModal = new bootstrap.Modal(document.getElementById('infoModal'));
+    myModal.show();
 }
 
 document.getElementById('project-form').addEventListener('submit', function(event) {
     const contacts = document.querySelectorAll('#contacts .contact-form-group');
     if (contacts.length === 0) {
         event.preventDefault();
-        alert("Legalább egy kapcsolattartó megadása kötelező.");
+        showAlertModal("Legalább egy kapcsolattartó megadása kötelező.");
     }
 });

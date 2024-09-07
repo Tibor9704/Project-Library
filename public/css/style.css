@@ -34,16 +34,6 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.btn-primary {
-    background-color: #1da1f2;
-    border: none;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.btn-primary:hover {
-    background-color: #1991db;
-}
 
 .alert-success {
     color: #ffffff;
@@ -60,8 +50,16 @@ h1 {
 }
 
 .alert-info {
-    color: #ffffff;
+    background-color: #6f6f6f;
+    border-radius: 0.25rem;
     font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
 }
 
 .list-group {
@@ -210,28 +208,30 @@ h1 {
 .navbar-nav {
     display: flex;
     gap: 1rem;
+    margin-left: auto;
 }
 
-.navbar-nav a {
+.navbar-nav .nav-link {
     color: #ffffff;
+    font-size: 1.5rem;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.navbar-nav a:hover {
-    background-color: grey;
+.navbar-nav .nav-link:hover {
+    color: #e1e8ed; 
 }
 
 
 #status-filter-form {
     display: flex;
     justify-content: flex-end; 
+    text-align: center;
 }
 
 #status-filter-form select {
-    font-family: 'Courier New', Courier, monospace; 
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center; 
 }
 
 .form-group {
@@ -259,14 +259,15 @@ h1 {
 }
 
 .footer {
-    background-color: rgb(168, 161, 161);
-    color: #ffffff;
+    background-color: #000000; 
+    color: #ffffff; 
     padding: 1rem;
     text-align: center;
     width: 100%;
     margin-top: auto;
     position: relative;
-    bottom: 0; 
+    bottom: 0;
+    border-top: 1px solid #e1e8ed; 
 }
 
 .project-item {

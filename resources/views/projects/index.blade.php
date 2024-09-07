@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+    <script src="{{ asset('js/index.js') }}"></script>
+
     <div class="container">
-        <ul class="list-group">
-            <h1>Projektek</h1>
-        </ul>
+        <h1>Projektek</h1>
+
         <form id="status-filter-form" action="{{ route('projects.index') }}" method="GET" class="mb-3">
             <div class="form-group">
                 <select name="status" id="status" class="form-control" onchange="submitForm()">
@@ -17,9 +19,23 @@
         </form>
 
         @if ($message = Session::get('success'))
-            <div class="alert alert-success">
+            <div id="successAlert" class="alert alert-success">
                 {{ $message }}
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var successAlert = document.getElementById('successAlert');
+                    if (successAlert) {
+                        setTimeout(function() {
+                            successAlert.style.opacity = '0';
+                            setTimeout(function() {
+                                successAlert.style.display = 'none';
+                            }, 500); 
+                        }, 3000); 
+                    }
+                });
+            </script>
         @endif
 
         @if ($projects->count())
@@ -51,11 +67,9 @@
                             </span>
                             <div class="project-buttons">
                                 <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning btn-sm">Szerkesztés</a>
-                                <form action="{{ route('projects.destroy', $project->id) }}" method="POST" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Biztosan törölni szeretnéd ezt a projektet?')">Törlés</button>
-                                </form>
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ $project->id }}" data-name="{{ $project->name }}">
+                                    Törlés
+                                </button>
                             </div>
                         </div>
                     </li>
@@ -85,17 +99,33 @@
                     </li>
                 </ul>
             </div>
-            
+
         @else
-            <div class="alert alert-info">
-                <b>Jelenleg nincs egyetlen projekt sem. </b><a href="{{ route('projects.create') }}">Hozz létre egyet!</a>
+            <div class="alert alert-info mt-3">
+                <b>Jelenleg nincs egyetlen projekt sem.</b> <a href="{{ route('projects.create') }}">Hozz létre egyet!</a>
             </div>
         @endif
     </div>
 
-    <script>
-        function submitForm() {
-            document.getElementById('status-filter-form').submit();
-        }
-    </script>
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Biztosan törölni szeretnéd?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Ezt a műveletet nem lehet visszavonni! Biztosan törölni szeretnéd a projektet: <strong id="projectName"></strong>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                    <form id="delete-form" action="" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Igen, töröld!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

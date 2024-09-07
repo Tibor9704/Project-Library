@@ -35,12 +35,12 @@ class ProjectController extends Controller
             'name' => 'required|unique:projects',
             'description' => 'required',
             'status' => 'required|in:fejlesztésre vár,folyamatban,kész',
-            'contacts' => 'required|array|min:1', // Ellenőrizzük, hogy legalább egy kapcsolattartó van
+            'contacts' => 'required|array|min:1', 
             'contacts.*.name' => 'required|string|max:20|min:3',
             'contacts.*.email' => 'required|email',
         ], [
             'name.unique' => 'A projekt már létezik!',
-            'contacts.min' => 'Legalább egy kapcsolattartó megadása kötelező.', // Egyedi üzenet a kapcsolattartók hiányáról
+            'contacts.min' => 'Legalább egy kapcsolattartó megadása kötelező.', 
         ]);
     
         $existingProject = Project::where('name', $request->name)->first();

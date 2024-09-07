@@ -21,6 +21,20 @@
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var successAlert = document.getElementById('successAlert');
+                    if (successAlert) {
+                        setTimeout(function() {
+                            successAlert.style.opacity = '0';
+                            setTimeout(function() {
+                                successAlert.style.display = 'none';
+                            }, 500); 
+                        }, 3000); 
+                    }
+                });
+            </script>
         @endif
 
         @if ($errors->any())
@@ -75,10 +89,26 @@
                 @endforeach
             </div>
 
-            <button type="button" onclick="addContact()">További kapcsolattartó hozzáadása</button>
+            <button type="button"   class="button" onclick="addContact()">További kapcsolattartó hozzáadása</button>
 
-            <button type="submit" class="btn btn-primary">Projekt frissítése</button>
-            <button type="button" class="btn btn-secondary" onclick="history.back()">Vissza</button>
+            <button type="submit" class="button">Projekt frissítése</button>
+            <button type="button" class="button" onclick="history.back()">Vissza</button>
         </form>
     </div>
+
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Figyelmeztetés</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezár</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection
