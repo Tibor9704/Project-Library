@@ -276,9 +276,10 @@ h1 {
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid #e1e8ed;
-    background: 
-    repeating-linear-gradient(45deg, rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.6) 10px, rgba(224, 224, 224, 0.6) 10px, rgba(224, 224, 224, 0.6) 20px), 
-        linear-gradient(to right, #f7f7f7, #eaeaea);
+    background: linear-gradient(135deg, #e0f1ff, #c2d9e8, #a9c3d7), 
+            radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px;
+    background-blend-mode: overlay;
 }
 
 .project-details {

@@ -30,15 +30,10 @@ h1 {
 }
 
 form {
-    background: 
-        repeating-linear-gradient(
-            45deg, 
-            rgba(255, 255, 255, 0.9), 
-            rgba(255, 255, 255, 0.9) 10px, 
-            rgba(240, 240, 240, 0.9) 10px, 
-            rgba(240, 240, 240, 0.9) 20px
-        ),
-        linear-gradient(to right, #f7f7f7, #eaeaea);
+    background: linear-gradient(135deg, #e0f1ff, #c2d9e8, #a9c3d7), 
+            radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px;
+    background-blend-mode: overlay;
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -113,15 +108,11 @@ select.form-control {
     padding: 1rem;
     border: 1px solid #e1e8ed;
     border-radius: 0.5rem;
-    background: 
-        repeating-linear-gradient(
-            45deg, 
-            rgba(255, 255, 255, 0.9), 
-            rgba(255, 255, 255, 0.9) 10px, 
-            rgba(240, 240, 240, 0.9) 10px, 
-            rgba(240, 240, 240, 0.9) 20px
-        ),
-        linear-gradient(to right, #f7f7f7, #eaeaea);
+    background: linear-gradient(135deg, #e0f1ff, #c2d9e8, #a9c3d7), 
+            radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px;
+    background-blend-mode: overlay;
+
     margin-bottom: 1rem; 
 }
 
